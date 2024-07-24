@@ -16,7 +16,7 @@
 		<Product>AiForms.Effects for .NET MAUI</Product>
 		<PackageProjectUrl>https://github.com/muak/AiForms.Maui.Effects</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/muak/AiForms.Maui.Effects/blob/main/LICENSE.txt</PackageLicenseUrl>
-		<PackageIconUrl>https://raw.githubusercontent.com/muak/AiForms.Maui.SettingsView/main/images/icon.png</PackageIconUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/muak/AiForms.Maui.Effects/main/images/icon.png</PackageIconUrl>
 		<Description>.NET MAUI Effects(Floating) for iOS / Android</Description>
 		<PackageReleaseNotes>			
         </PackageReleaseNotes>
