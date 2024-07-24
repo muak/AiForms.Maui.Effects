@@ -87,7 +87,7 @@ This sample is that an element is arranged at above 25dp from the vertical end a
 ### Property
 
 * Content (trigger)
-    * The root element to arrange floating views.
+    * The root element to arrange some views.
     * This property is of type FloatingLayout.
 
 

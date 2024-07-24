@@ -81,7 +81,7 @@ builder.UseAiEffects();
 ### Property
 
 * Content (trigger)
-    * FloatingViewを配置するためのルート要素で FloatingLayoutクラスです。
+    * 子要素を配置するためのレイアウト要素で FloatingLayoutクラスです。
 
 ### FloatingLayout
 
