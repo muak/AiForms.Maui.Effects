@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios;</TargetFrameworks>
+		<UseMaui>true</UseMaui>
+		<MauiVersion>8.0.40</MauiVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>AiForms.Effects</RootNamespace>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+
+		<PackageId>AiForms.Maui.Effects</PackageId>
+		<Authors>kamu</Authors>
+		<Company>kamu</Company>
+		<Product>AiForms.Effects for .NET MAUI</Product>
+		<PackageProjectUrl>https://github.com/muak/AiForms.Maui.Effects</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/muak/AiForms.Maui.Effects/blob/main/LICENSE.txt</PackageLicenseUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/muak/AiForms.Maui.SettingsView/main/images/icon.png</PackageIconUrl>
+		<Description>.NET MAUI Effects(Floating) for iOS / Android</Description>
+		<PackageReleaseNotes>			
+        </PackageReleaseNotes>
+		<PackageTags>MAUI Effects FAB FloatingActionButton AiForms</PackageTags>
+	</PropertyGroup>
+
+	<!-- Android -->
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net8.0-android')) != true">
+		<Compile Remove="**\**\*.Android.cs" />
+		<None Include="**\**\*.Android.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+		<Compile Remove="**\Android\**\*.cs" />
+		<None Include="**\Android\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />  
+	</ItemGroup>	
+
+	<!-- iOS -->
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net8.0-ios')) != true">
+		<Compile Remove="**\**\*.iOS.cs" />
+		<None Include="**\**\*.iOS.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+		<Compile Remove="**\iOS\**\*.cs" />
+		<None Include="**\iOS\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+	</ItemGroup>
+
+	<!-- net8.0 -->
+	<ItemGroup Condition="'$(TargetFramework)' != 'net8.0'">
+		<Compile Remove="**\**\*.Net.cs" />
+		<None Include="**\**\*.Net.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Extensions\" />
+	  <None Remove="Floating\" />
+	  <None Remove="Utilities\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Extensions\" />
+	  <Folder Include="Floating\" />
+	  <Folder Include="Utilities\" />
+	</ItemGroup>
+</Project>

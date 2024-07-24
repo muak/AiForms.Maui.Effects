@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Maui.Effects"
+    x:Class="Sample.FloatingPage"
+    Title="FloatingPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="Opacity" Value="0.7" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Next" Command="{Binding NextCommand}" />
+    </ContentPage.ToolbarItems>
+    
+    <ef:Floating.Content>
+        <ef:FloatingLayout>
+            <Button
+                CornerRadius="28" WidthRequest="56" HeightRequest="56"
+                Clicked="BlueTap"
+                Text="+" FontSize="24" BackgroundColor="Blue" TextColor="White" Padding="0"
+                VerticalOptions="End" HorizontalOptions="End"
+                ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25"
+                ef:FloatingLayout.IsVisible="{Binding Visible.Value}"/>
+
+            <ef:FloatingActionButton
+                Color="Green"
+                ImageColor="White"
+                ImageSource="edit"
+                Command="{Binding FabCommand}"
+                WidthRequest="48" HeightRequest="48"
+                VerticalOptions="End" HorizontalOptions="Start"
+                ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="-25"
+                />
+
+            <Grid
+                WidthRequest="100" HeightRequest="100"
+                VerticalOptions="Center" HorizontalOptions="Center"
+                BackgroundColor="Yellow">
+                <Label
+                    WidthRequest="56" HeightRequest="56"
+                    Text="Grid" FontSize="24" BackgroundColor="Blue" TextColor="White" Padding="0"
+                    >
+                </Label>
+            </Grid>
+                           
+
+            <!-- V Start -->            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Start" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Start" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+            
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Start" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>            
+           
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Start" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"                    
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Start" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Start" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Start" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Start" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Start" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+            
+            <!-- V Center -->
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Center" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"                    
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Center" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Center" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"                    
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="Center" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Center" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="Center" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <!-- V End -->
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="End" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"                    
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value} "/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="End" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="End" HorizontalOptions="Start"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="End" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"                    
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="End" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="End" HorizontalOptions="Center"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <Button Clicked="GreenTap" BackgroundColor="Green"
+                    VerticalOptions="End" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="End" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+
+            <Button Clicked="RedTap" BackgroundColor="Red"
+                    VerticalOptions="End" HorizontalOptions="End"
+                    HeightRequest="50" WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-25" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible1.Value}"/>
+            
+            <!-- V Start / H Fill -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="Start" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="Start" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="Start" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"
+                    />
+            
+            <!-- V Center / H Fill -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="Center" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="Center" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="Center" HorizontalOptions="Fill"
+                    HeightRequest="100" 
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"
+                    />
+            
+            <!-- V End / H Fill -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="End" HorizontalOptions="Fill"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="End" HorizontalOptions="Fill"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="25" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="End" HorizontalOptions="Fill"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-25" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible2.Value}"
+                    />
+            
+            
+            <!-- V Fill / H Start -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="Fill" HorizontalOptions="Start"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"
+                    />
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="Fill" HorizontalOptions="Start"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="35" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="Fill" HorizontalOptions="Start"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-35" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+            
+            <!-- V Fill / H Center -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="Fill" HorizontalOptions="Center"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"
+                    />
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="Fill" HorizontalOptions="Center"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="35" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="Fill" HorizontalOptions="Center"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-35" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+            
+            <!-- V Fill / H End -->
+            <Button Clicked="LimeTap" BackgroundColor="Lime"
+                    VerticalOptions="Fill" HorizontalOptions="End"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"
+                    />
+            
+            <Button Clicked="NavyTap" BackgroundColor="Navy"
+                    VerticalOptions="Fill" HorizontalOptions="End"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="35" ef:FloatingLayout.OffsetY="75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+
+            <Button Clicked="PinkTap" BackgroundColor="Fuchsia"
+                    VerticalOptions="Fill" HorizontalOptions="End"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-35" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible3.Value}"/>
+            
+            <!-- V Fill / H Fill -->
+            <Button Clicked="BlueTap" BackgroundColor="Blue"
+                    VerticalOptions="Fill" HorizontalOptions="Fill"
+                    HeightRequest="100"  WidthRequest="50"
+                    ef:FloatingLayout.OffsetX="-35" ef:FloatingLayout.OffsetY="-75" 
+                    ef:FloatingLayout.IsVisible="{Binding Visible4.Value}"/>            
+           
+        </ef:FloatingLayout>
+    </ef:Floating.Content>
+    
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Header" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Button Text="Button" Clicked="Handle_Clicked" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Main Content" HeightRequest="200" />
+            <Label Text="Footer" />
+        </StackLayout>
+    </ScrollView>    
+
+</ContentPage>
