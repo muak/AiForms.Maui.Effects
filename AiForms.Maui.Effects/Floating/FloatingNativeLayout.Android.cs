@@ -114,7 +114,9 @@ public class FloatingNativeLayout : FrameLayout
             {
                 if (child.Handler is IPlatformViewHandler childHandler)
                 {
-                    childHandler.PlatformView!.Alpha = 0;
+                    childHandler.PlatformView!.Alpha = 0f;
+                    // If not set to false once, it may not be reflected correctly.
+                    child.InputTransparent = false;
                     child.InputTransparent = true;
                 }
             }

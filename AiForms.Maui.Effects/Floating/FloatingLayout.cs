@@ -77,7 +77,7 @@ public class FloatingLayout :View, IList<View>
 #endif
 #if ANDROID
                 handler.PlatformView!.Alpha = isVisible ? (float)element.Opacity : 0;
-                element.InputTransparent = !isVisible;                
+                element.InputTransparent = !isVisible;
 #endif
             }            
         );
